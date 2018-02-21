@@ -1,0 +1,5 @@
+{
+	"patient_no"   : "1234",
+	"patient_name" : "Test",
+	"patience_BG_values" : [1.1,2.3,4.5,5.5]
+}
