@@ -3,11 +3,13 @@ import os
 import json
 import statistics
 
+import db.config as config
+
 '''DB FETCH'''
-db_patient =TinyDB('/home/mssprrg/BGProject/src/db/db_schema/PATIENT_DATA.json')
-db_bg=TinyDB('/home/mssprrg/BGProject/src/db/db_schema/BG_VALUES.json')
-db_lifestyle=TinyDB('/home/mssprrg/BGProject/src/db/db_schema/LIFESTYLE.json')
-db_hour_values=TinyDB('/home/mssprrg/BGProject/src/db/db_schema/BG_VALUES_HOUR.json')
+db_patient =TinyDB(config.DB_PATIENT)
+db_bg=TinyDB(config.DB_BG_VALUES)
+db_lifestyle=TinyDB(config.DB_LIFESTYLE)
+db_hour_values=TinyDB(config.DB_HOUR_VALUES)
 
 '''QUERY OBJECT'''
 DB_Query=Query()
@@ -17,7 +19,7 @@ DB_Query=Query()
 
 '''BG_VALUES OPERATIONS '''
 def bg_operation():
-	if (not os.path.exists('/home/mssprrg/BGProject/src/db/db_schema/BG_VALUES.json')):
+	if (not os.path.exists(config.DB_BG_VALUES)):
 		try:
 			raise Exception('BG_VALUE FILE inconsistent')
 		except Exception as error:

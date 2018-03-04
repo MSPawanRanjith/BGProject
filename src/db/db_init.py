@@ -1,18 +1,18 @@
 from tinydb import TinyDB
-
+import config
 '''Initializing db files'''
 
-db_patient =TinyDB('/home/mssprrg/BGProject/src/db/db_schema/PATIENT_DATA.json')
+db_patient =TinyDB(config.DB_PATIENT)
 print("Initialized Patient files..")
 
-db_doctor =TinyDB('/home/mssprrg/BGProject/src/db/db_schema/DOCTOR_DATA.json')
+db_doctor =TinyDB(config.DB_DOCTOR)
 print("Initialized Doctor files..")
 
-db_bg_values=TinyDB('/home/mssprrg/BGProject/src/db/db_schema/BG_VALUES.json')
+db_bg_values=TinyDB(config.DB_BG_VALUES)
 print("Initialized BG_Values files..")
 
-db_lifestyle=TinyDB('/home/mssprrg/BGProject/src/db/db_schema/LIFESTYLE.json')
+db_lifestyle=TinyDB(config.DB_LIFESTYLE)
 print("Initialized LIFESTYLE files..")
 
-db_hour_values=TinyDB('/home/mssprrg/BGProject/src/db/db_schema/BG_VALUES_HOUR.json')
+db_hour_values=TinyDB(config.DB_HOUR_VALUES)
 print("Initialized BG_VALUES_HOUR files..")
